@@ -10,4 +10,4 @@ script:
   - env
   - docker build -t johnae/test_ci:master .
   - docker run --rm -ti johnae/test_ci:master test_runner
-  - docker rmi johnae/test_ci:master
+  - docker rmi -f johnae/test_ci:master || true
