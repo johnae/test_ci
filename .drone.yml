@@ -9,5 +9,5 @@ script:
   - docker images
   - env
   - docker build -t johnae/test_ci:master .
-  - docker run --rm -ti johnae/test_ci:master test_runner
+  - docker run --rm johnae/test_ci:master test_runner
   - docker rmi -f johnae/test_ci:master || true
