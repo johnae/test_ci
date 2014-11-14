@@ -7,4 +7,4 @@ git:
 script:
   - docker -v
   - docker images
-  - echo "FOO: $BAR"
+  - env
