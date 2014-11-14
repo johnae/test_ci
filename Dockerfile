@@ -13,7 +13,8 @@ RUN apt-get update &&\
     apt-get autoclean -y -q &&\
     rm -rf /tmp/* &&\
     rm -rf /var/tmp/* &&\
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* &&\
+    chmod -R +x /testci/bin/
 
 USER testci
 ENV PATH /testci/bin:$PATH
