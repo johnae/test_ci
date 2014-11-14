@@ -4,12 +4,7 @@ env:
 git:
   path: github.com/johnae/test_ci
 script:
-  - /etc/init.d/docker start
-  - echo "sleeping FOO: $FOO"
-  - sleep 5
-  - ls -lah /var/run/
   - docker -v
   - docker images
-  - docker build -t johnae/test_ci:master .
-  - docker run -ti --rm johnae/test_ci:master test_runner
-  - /etc/init.d/docker stop
+cache:
+  - /var/run/docker.sock:/var/run/docker.sock 
