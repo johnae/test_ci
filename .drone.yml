@@ -1,10 +1,10 @@
 image: jpetazzo/dind
 env:
-  FOO: BAR
+  - FOO=BAR
+  - DOCKER_HOST=tcp://172.17.42.1:2375
 git:
   path: github.com/johnae/test_ci
 script:
   - docker -v
   - docker images
-cache:
-  - /var/run/docker.sock:/var/run/docker.sock 
+  - echo "FOO: $BAR"
