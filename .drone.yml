@@ -7,4 +7,6 @@ script:
   - ls -lah /var/run/
   - docker -v
   - docker images
+  - docker build -t johnae/test_ci:master .
+  - docker run -ti --rm johnae/test_ci:master test_runner
   - /etc/init.d/docker stop
