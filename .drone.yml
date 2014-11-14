@@ -2,6 +2,6 @@ image: jpetazzo/dind
 git:
   path: github.com/johnae/test_ci
 script:
-  - wrap_docker
+  - wrapdocker
   - docker build -t johnae/test_ci:master .
   - docker run -ti -rm johnae/test_ci:master test_runner
