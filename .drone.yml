@@ -5,7 +5,8 @@ git:
   path: github.com/johnae/test_ci
 script:
   - /etc/init.d/docker start
-  - echo "sleeping FOO: $FOO" && sleep 5
+  - echo "sleeping FOO: $FOO"
+  - sleep 5
   - ls -lah /var/run/
   - docker -v
   - docker images
